@@ -66,7 +66,7 @@
   <string name="todo_state">Todo state</string>
   <string name="back">Back</string>
   <string name="cancel">Cancel</string>
-  <string name="save">Save</string>  
+  <string name="save">Save</string>
   <string name="search_hint">Search</string>
   <string name="warning">WARNING!</string>
   <string name="cert_changed">The WebDAV Certificate has changed, below are the details.  If you are okay with this click \'Accept\' otherwise click \'Deny\'.  If you accept the new certificate you will need to re-issue your Synchronize command</string>
@@ -103,7 +103,7 @@
   <string name="null_sync_description">This is a capture only synchronizer.  It will not attempt to synchronize to any source.</string>
   <string name="url">URL</string>
   <string name="wizard_dropbox_email_hint">uri@frankandrobot.com</string>
-  
+
     <!-- preference strings -->
   <string name="title_capture_with_timestamp">Capture with Timestamp</string>
   <string name="summary_capture_with_timestamp">Captured nodes will have a timestamp added</string>
@@ -161,5 +161,5 @@
   <string name="preference_fullscreen_summary">Toggle fullscreen.</string>
   <string name="edit_date_start">Start</string>
   <string name="edit_date_end">End</string>
-  <string name="edit_date_date">Date</string>  
+  <string name="edit_date_date">Date</string>
 </resources>
