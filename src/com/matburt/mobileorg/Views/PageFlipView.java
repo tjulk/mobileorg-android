@@ -109,24 +109,29 @@ public class PageFlipView extends HorizontalScrollView
     }
 
     //disable/enable all buttons for given page
-    public void setNavButtonStateOnPage(int page, boolean state, int page_type) { 
-	//get the pageview container
-	View pageContainer = (View) container.getChildAt(page);
-	Button prevButton=(Button) pageContainer.findViewById(R.id.wizard_previous_button);
-	Button nextButton=(Button) pageContainer.findViewById(R.id.wizard_next_button);
-	switch(page_type) {
-	case FIRST_PAGE : setButtonState(nextButton,state,nextPageButtonListener); break;
-	case MIDDLE_PAGE : 
-		setButtonState(prevButton,state,previousPageButtonListener);
-		setButtonState(nextButton,state,nextPageButtonListener);
-		break;
-	case LAST_PAGE:
-		setButtonState(prevButton,state,previousPageButtonListener);
-		//Button done=(Button) pageContainer.findViewById(R.id.wizard_done_button);
-		//done.setEnabled(false);
-		break;
+	public void setNavButtonStateOnPage(int page, boolean state, int page_type) {
+		// get the pageview container
+		if (container == null)
+			container = (WideLinearLayout) findViewById(R.id.wizard_container);
+		View pageContainer = (View) container.getChildAt(page);
+		Button prevButton = (Button) pageContainer.findViewById(R.id.wizard_previous_button);
+		Button nextButton = (Button) pageContainer.findViewById(R.id.wizard_next_button);
+		switch (page_type) {
+		case FIRST_PAGE:
+			setButtonState(nextButton, state, nextPageButtonListener);
+			break;
+		case MIDDLE_PAGE:
+			setButtonState(prevButton, state, previousPageButtonListener);
+			setButtonState(nextButton, state, nextPageButtonListener);
+			break;
+		case LAST_PAGE:
+			setButtonState(prevButton, state, previousPageButtonListener);
+			// Button done=(Button)
+			// pageContainer.findViewById(R.id.wizard_done_button);
+			// done.setEnabled(false);
+			break;
+		}
 	}
-    }
 
     public void setDoneButtonOnClickListener(View.OnClickListener e) {
 	    Button done=(Button) container.findViewById(R.id.wizard_done_button);
